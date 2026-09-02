@@ -249,38 +249,3 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 if (statNum) counterObserver.observe(statNum);
-
-// Custom Cursor
-const cursorDot = document.getElementById('cursorDot');
-const cursorRing = document.getElementById('cursorRing');
-
-let mouseX = 0;
-let mouseY = 0;
-let ringX = 0;
-let ringY = 0;
-
-document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursorDot.style.left = mouseX + 'px';
-    cursorDot.style.top = mouseY + 'px';
-});
-
-document.addEventListener('mousedown', () => cursorRing.classList.add('down'));
-document.addEventListener('mouseup', () => cursorRing.classList.remove('down'));
-
-// Hover growth on interactive elements
-document.querySelectorAll('a, button, .btn, .service-card, .work-card, .process-step, .t-card').forEach(el => {
-    el.addEventListener('mouseenter', () => cursorRing.classList.add('hovering'));
-    el.addEventListener('mouseleave', () => cursorRing.classList.remove('hovering'));
-});
-
-// Smooth ring follow
-function ringFollow() {
-    ringX += (mouseX - ringX) * 0.15;
-    ringY += (mouseY - ringY) * 0.15;
-    cursorRing.style.left = ringX + 'px';
-    cursorRing.style.top = ringY + 'px';
-    requestAnimationFrame(ringFollow);
-}
-ringFollow();
