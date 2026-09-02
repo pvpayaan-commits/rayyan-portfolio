@@ -746,6 +746,86 @@ section {
     text-shadow: 0 0 20px rgba(240, 208, 96, 0.3);
 }
 
+/* Regular Card — Steel Blue Starter */
+.service-card.regular-card {
+    background: linear-gradient(170deg, #eef2fb 0%, #e6ecf8 40%, #f0f4fc 100%);
+    border-color: #c5d0ea;
+    box-shadow: 0 6px 25px rgba(120, 140, 200, 0.15), var(--shadow);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.service-card.regular-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #5b7bd6, #9db8f0, #5b7bd6);
+    background-size: 200% 100%;
+    animation: goldShimmer 3s linear infinite;
+}
+
+.service-card.regular-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 15px 40px rgba(91, 123, 214, 0.28), var(--shadow-lg);
+    border-color: #8fa7e0;
+}
+
+.badge-silver {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #8ea2c7, #c3d0ea, #8ea2c7);
+    background-size: 200% 100%;
+    animation: badgeShine 2.5s ease-in-out infinite;
+    color: #16224a;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 7px 22px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+    box-shadow: 0 5px 20px rgba(120, 140, 200, 0.45);
+    z-index: 2;
+}
+
+.icon-regular {
+    background: rgba(91, 123, 214, 0.12) !important;
+    color: #4a6bc0 !important;
+    box-shadow: 0 0 20px rgba(91, 123, 214, 0.2);
+}
+
+.service-card.regular-card:hover .icon-regular {
+    box-shadow: 0 0 30px rgba(91, 123, 214, 0.35);
+    transform: scale(1.08);
+}
+
+.service-card.regular-card h3 {
+    color: #16224a;
+}
+
+.service-card.regular-card p {
+    color: #5a6688;
+}
+
+.service-card.regular-card ul li {
+    color: #4a5677;
+}
+
+.service-card.regular-card ul li::before {
+    color: #4a6bc0;
+}
+
+.price-regular {
+    color: #4a6bc0 !important;
+    border-top-color: rgba(91, 123, 214, 0.25) !important;
+}
+
 .services-note {
     text-align: center;
     margin-top: 35px;
