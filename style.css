@@ -806,11 +806,30 @@ section {
     background: rgba(91, 123, 214, 0.12) !important;
     color: #4a6bc0 !important;
     box-shadow: 0 0 20px rgba(91, 123, 214, 0.2);
+    animation: iconPulseBlue 3s ease-in-out infinite;
+}
+
+@keyframes iconPulseBlue {
+    0%, 100% { box-shadow: 0 0 15px rgba(91, 123, 214, 0.15); }
+    50% { box-shadow: 0 0 35px rgba(91, 123, 214, 0.4); }
 }
 
 .service-card.regular-card:hover .icon-regular {
-    box-shadow: 0 0 30px rgba(91, 123, 214, 0.35);
-    transform: scale(1.08);
+    box-shadow: 0 0 40px rgba(91, 123, 214, 0.45);
+    transform: scale(1.1);
+}
+
+/* Soft radial glow behind regular card */
+.service-card.regular-card::after {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -20%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(91, 123, 214, 0.12), transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 .service-card.regular-card h3 {
@@ -832,6 +851,93 @@ section {
 .price-regular {
     color: #4a6bc0 !important;
     border-top-color: rgba(91, 123, 214, 0.25) !important;
+}
+
+/* Monthly Card — Teal Care */
+.service-card.monthly-card {
+    background: linear-gradient(170deg, #eefbf7 0%, #e6f7f2 40%, #f0fcf9 100%);
+    border-color: #b5e3d4;
+    box-shadow: 0 6px 25px rgba(26, 180, 152, 0.15), var(--shadow);
+    position: relative;
+    overflow: hidden;
+    padding-top: 62px;
+    transition: all 0.4s ease;
+}
+
+.service-card.monthly-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #17b897, #7fe0c6, #17b897);
+    background-size: 200% 100%;
+    animation: goldShimmer 3s linear infinite;
+}
+
+.service-card.monthly-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 15px 40px rgba(23, 184, 151, 0.28), var(--shadow-lg);
+    border-color: #6fd4b8;
+}
+
+.badge-teal {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #0fa184, #66d7bb, #0fa184);
+    background-size: 200% 100%;
+    animation: badgeShine 2.5s ease-in-out infinite;
+    color: #042c23;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 7px 22px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+    box-shadow: 0 5px 20px rgba(23, 184, 151, 0.45);
+    z-index: 2;
+}
+
+.icon-monthly {
+    background: rgba(23, 184, 151, 0.12) !important;
+    color: #0fa184 !important;
+    box-shadow: 0 0 20px rgba(23, 184, 151, 0.2);
+    animation: iconPulseTeal 3s ease-in-out infinite;
+}
+
+@keyframes iconPulseTeal {
+    0%, 100% { box-shadow: 0 0 15px rgba(23, 184, 151, 0.15); }
+    50% { box-shadow: 0 0 35px rgba(23, 184, 151, 0.4); }
+}
+
+.service-card.monthly-card:hover .icon-monthly {
+    box-shadow: 0 0 40px rgba(23, 184, 151, 0.45);
+    transform: scale(1.1);
+}
+
+.service-card.monthly-card h3 {
+    color: #0a4a3c;
+}
+
+.service-card.monthly-card p {
+    color: #4a7a6d;
+}
+
+.service-card.monthly-card ul li {
+    color: #3d6259;
+}
+
+.service-card.monthly-card ul li::before {
+    color: #0fa184;
+}
+
+.price-monthly {
+    color: #0fa184 !important;
+    border-top-color: rgba(23, 184, 151, 0.25) !important;
 }
 
 .services-note {
