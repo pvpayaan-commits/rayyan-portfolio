@@ -115,3 +115,74 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Typing Effect
+const typedPhrases = [
+    'Professional websites for businesses in Multan',
+    'Clean designs that load fast on every device',
+    'From school sites to restaurant pages',
+    'Affordable pricing, premium quality',
+    'WhatsApp support from start to finish'
+];
+const typedText = document.getElementById('typedText');
+let phraseIdx = 0;
+let charIdx = 0;
+let deleting = false;
+
+function typeEffect() {
+    const phrase = typedPhrases[phraseIdx];
+    if (!deleting) {
+        typedText.textContent = phrase.slice(0, charIdx + 1);
+        charIdx++;
+        if (charIdx === phrase.length) {
+            deleting = true;
+            setTimeout(typeEffect, 2200);
+            return;
+        }
+        setTimeout(typeEffect, 50);
+    } else {
+        typedText.textContent = phrase.slice(0, charIdx - 1);
+        charIdx--;
+        if (charIdx === 0) {
+            deleting = false;
+            phraseIdx = (phraseIdx + 1) % typedPhrases.length;
+            setTimeout(typeEffect, 400);
+            return;
+        }
+        setTimeout(typeEffect, 30);
+    }
+}
+
+typeEffect();
+
+// Animated Counter
+const statNum = document.querySelector('.stat-num[data-target]');
+
+function animateCounter() {
+    if (!statNum) return;
+    const target = parseInt(statNum.getAttribute('data-target'));
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+    function update() {
+        current += step;
+        if (current < target) {
+            statNum.textContent = Math.floor(current);
+            requestAnimationFrame(update);
+        } else {
+            statNum.textContent = target;
+        }
+    }
+    update();
+}
+
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounter();
+            counterObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+if (statNum) counterObserver.observe(statNum);
