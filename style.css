@@ -619,6 +619,68 @@ section {
     color: rgba(255, 255, 255, 0.7);
 }
 
+/* Premium Card — Dark Gold Luxury */
+.service-card.premium-card {
+    background: linear-gradient(160deg, #1c1c2e 0%, #1a1730 50%, #221e3a 100%);
+    border-color: #c8a84e;
+    box-shadow: 0 0 30px rgba(200, 168, 78, 0.15), var(--shadow-lg);
+    transform: scale(1.04);
+    position: relative;
+}
+
+.service-card.premium-card:hover {
+    box-shadow: 0 0 45px rgba(200, 168, 78, 0.35), var(--shadow-xl);
+    border-color: #e6c55a;
+}
+
+.badge-gold {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #d4a832, #f0d060);
+    color: #1c1c2e;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 6px 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    white-space: nowrap;
+    box-shadow: 0 5px 20px rgba(212, 168, 50, 0.5);
+}
+
+.icon-premium {
+    background: rgba(200, 168, 78, 0.15) !important;
+    color: #d4a832 !important;
+    box-shadow: 0 0 25px rgba(200, 168, 78, 0.2);
+}
+
+.service-card.premium-card:hover .icon-premium {
+    box-shadow: 0 0 35px rgba(200, 168, 78, 0.4);
+}
+
+.service-card.premium-card h3 {
+    color: #f0d060;
+}
+
+.service-card.premium-card p {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.service-card.premium-card ul li {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.service-card.premium-card ul li::before {
+    color: #f0d060;
+}
+
+.price-premium {
+    color: #f0d060 !important;
+    border-top-color: rgba(240, 208, 96, 0.3) !important;
+}
+
 .services-note {
     text-align: center;
     margin-top: 35px;
@@ -1160,7 +1222,8 @@ section {
         grid-template-columns: 1fr 1fr;
     }
 
-    .service-card.featured {
+    .service-card.featured,
+    .service-card.premium-card {
         transform: none;
     }
 
