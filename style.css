@@ -1047,9 +1047,12 @@ section {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr;
     gap: 60px;
     align-items: center;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 .about-photo {
