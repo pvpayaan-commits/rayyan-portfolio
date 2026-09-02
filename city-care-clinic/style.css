@@ -152,6 +152,65 @@ ul { list-style: none; }
 .appointment-box p { opacity: 0.9; margin-bottom: 30px; }
 .appointment-actions { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
 
+.appointment-form {
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid rgba(255,255,255,0.25);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.12);
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.form-group select {
+    appearance: none;
+    cursor: pointer;
+}
+
+.form-group select option {
+    color: var(--text);
+    background: var(--white);
+}
+
+.form-group input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--accent);
+    background: rgba(255,255,255,0.2);
+}
+
+.form-group input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.btn-block {
+    width: 100%;
+    justify-content: center;
+}
+
 /* Contact */
 .contact { background: var(--off-white); }
 .contact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }

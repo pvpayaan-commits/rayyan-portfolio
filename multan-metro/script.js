@@ -50,3 +50,52 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// EmailJS Reservation Form
+const reservationForm = document.getElementById('reservationForm');
+const resButton = document.getElementById('resButton');
+
+// EmailJS credentials — shared with your EmailJS account
+const EMAILJS_PUBLIC_KEY = 'OtP5WKK3EKEV7Mis6';
+const EMAILJS_SERVICE_ID = 'service_5q9oh6a';
+const EMAILJS_TEMPLATE_ID = 'template_t5xdn0l';
+
+if (window.emailjs) {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+}
+
+reservationForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const original = resButton.innerHTML;
+    resButton.disabled = true;
+    resButton.innerHTML = '<span class="btn-icon"><i class="fas fa-spinner fa-spin"></i></span> Sending...';
+
+    const templateParams = {
+        site_name: 'Multan Metro Restaurant',
+        from_name: document.getElementById('res-name').value,
+        customer_phone: document.getElementById('res-phone').value,
+        res_date: document.getElementById('res-date').value,
+        guests: document.getElementById('res-guests').value,
+        notes: document.getElementById('res-notes').value
+    };
+
+    if (!window.emailjs) {
+        resButton.disabled = false;
+        resButton.innerHTML = original;
+        alert('EmailJS is not loaded. Check internet connection.');
+        return;
+    }
+
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+        .then(() => {
+            resButton.innerHTML = '<span class="btn-icon"><i class="fas fa-check-circle"></i></span> Request Sent! We\'ll Call to Confirm';
+            reservationForm.reset();
+            setTimeout(() => { resButton.innerHTML = original; resButton.disabled = false; }, 3500);
+        })
+        .catch((error) => {
+            console.error('EmailJS error:', error);
+            resButton.innerHTML = '<span class="btn-icon"><i class="fas fa-exclamation-circle"></i></span> Failed. Please Try Again';
+            setTimeout(() => { resButton.innerHTML = original; resButton.disabled = false; }, 3000);
+        });
+});

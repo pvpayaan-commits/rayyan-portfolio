@@ -50,3 +50,51 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// EmailJS Appointment Form
+const appointmentForm = document.getElementById('appointmentForm');
+const appButton = document.getElementById('appButton');
+
+// EmailJS credentials — shared with your EmailJS account
+const EMAILJS_PUBLIC_KEY = 'OtP5WKK3EKEV7Mis6';
+const EMAILJS_SERVICE_ID = 'service_5q9oh6a';
+const EMAILJS_TEMPLATE_ID = 'template_t5xdn0l';
+
+if (window.emailjs) {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+}
+
+appointmentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const original = appButton.innerHTML;
+    appButton.disabled = true;
+    appButton.innerHTML = '<span class="btn-icon"><i class="fas fa-spinner fa-spin"></i></span> Sending...';
+
+    const templateParams = {
+        site_name: 'City Care Medical Clinic',
+        from_name: document.getElementById('app-name').value,
+        customer_phone: document.getElementById('app-phone').value,
+        app_date: document.getElementById('app-date').value,
+        doctor: document.getElementById('app-doctor').value
+    };
+
+    if (!window.emailjs) {
+        appButton.disabled = false;
+        appButton.innerHTML = original;
+        alert('EmailJS is not loaded. Check internet connection.');
+        return;
+    }
+
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+        .then(() => {
+            appButton.innerHTML = '<span class="btn-icon"><i class="fas fa-check-circle"></i></span> Appointment Request Sent!';
+            appointmentForm.reset();
+            setTimeout(() => { appButton.innerHTML = original; appButton.disabled = false; }, 3500);
+        })
+        .catch((error) => {
+            console.error('EmailJS error:', error);
+            appButton.innerHTML = '<span class="btn-icon"><i class="fas fa-exclamation-circle"></i></span> Failed. Please Try Again';
+            setTimeout(() => { appButton.innerHTML = original; appButton.disabled = false; }, 3000);
+        });
+});

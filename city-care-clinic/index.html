@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -185,11 +186,36 @@
             <div class="appointment-box">
                 <span class="section-tag">Appointment</span>
                 <h2>Book an Appointment</h2>
-                <p>Call us or message on WhatsApp — we'll confirm your slot immediately.</p>
-                <div class="appointment-actions">
-                    <a href="tel:0614501122" class="btn btn-primary btn-lg"><i class="fas fa-phone-alt"></i> 061 450 1122</a>
-                    <a href="https://wa.me/923004501122?text=Hi%2C%20I%20want%20to%20book%20an%20appointment" target="_blank" class="btn btn-accent btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                </div>
+                <p>Fill the form and our team will confirm your slot by phone or WhatsApp.</p>
+                <form class="appointment-form" id="appointmentForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="app-name" placeholder="Patient Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="app-phone" placeholder="Phone Number" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="date" id="app-date" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="app-doctor" required>
+                                <option value="">Select a Doctor</option>
+                                <option value="Dr. Adeel Khan">Dr. Adeel Khan — General</option>
+                                <option value="Dr. Farah Mehmood">Dr. Farah Mehmood — Pediatrician</option>
+                                <option value="Dr. Imran Shah">Dr. Imran Shah — Orthopedic</option>
+                                <option value="Dr. Saima Riaz">Dr. Saima Riaz — Gynecologist</option>
+                                <option value="Dr. Harris Ali">Dr. Harris Ali — ENT</option>
+                                <option value="Dr. Nadia Bashir">Dr. Nadia Bashir — Dermatologist</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-accent btn-lg btn-block" id="appButton">
+                        <span class="btn-icon"><i class="fas fa-calendar-check"></i></span> Book Appointment
+                    </button>
+                </form>
             </div>
         </div>
     </section>
