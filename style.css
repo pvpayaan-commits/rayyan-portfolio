@@ -631,6 +631,7 @@ section {
     transform: scale(1.06);
     position: relative;
     overflow: hidden;
+    padding-top: 62px;
     transition: all 0.4s ease;
 }
 
@@ -680,7 +681,7 @@ section {
 /* Gold badge with shine */
 .badge-gold {
     position: absolute;
-    top: -14px;
+    top: 18px;
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(135deg, #c9982a, #f5dc6e, #c9982a);
@@ -753,6 +754,7 @@ section {
     box-shadow: 0 6px 25px rgba(120, 140, 200, 0.15), var(--shadow);
     position: relative;
     overflow: hidden;
+    padding-top: 62px;
     transition: all 0.4s ease;
 }
 
@@ -776,7 +778,7 @@ section {
 
 .badge-silver {
     position: absolute;
-    top: -14px;
+    top: 18px;
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(135deg, #8ea2c7, #c3d0ea, #8ea2c7);
