@@ -498,6 +498,8 @@ section {
     border: 2px solid transparent;
     transition: var(--transition);
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card:hover {
@@ -572,6 +574,7 @@ section {
 
 .service-card ul {
     margin-bottom: 20px;
+    flex-grow: 1;
 }
 
 .service-card ul li {
@@ -604,6 +607,7 @@ section {
     color: var(--primary);
     border-top: 1px dashed #ddd;
     padding-top: 18px;
+    margin-top: auto;
 }
 
 .service-card.featured .service-price {
