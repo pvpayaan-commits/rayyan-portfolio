@@ -621,47 +621,111 @@ section {
 
 /* Premium Card — Dark Gold Luxury */
 .service-card.premium-card {
-    background: linear-gradient(160deg, #1c1c2e 0%, #1a1730 50%, #221e3a 100%);
-    border-color: #c8a84e;
-    box-shadow: 0 0 30px rgba(200, 168, 78, 0.15), var(--shadow-lg);
-    transform: scale(1.04);
+    background: linear-gradient(170deg, #18162a 0%, #1d1a34 40%, #231e3d 100%);
+    border: 2px solid transparent;
+    border-image: linear-gradient(160deg, #a8862e, #f0d060, #a8862e) 1;
+    box-shadow:
+        0 0 30px rgba(200, 168, 78, 0.12),
+        inset 0 1px 0 rgba(240, 208, 96, 0.15),
+        var(--shadow-lg);
+    transform: scale(1.06);
     position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.service-card.premium-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(240, 208, 96, 0.06), transparent);
+    animation: premiumSweep 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes premiumSweep {
+    0% { left: -150%; }
+    50%, 100% { left: 150%; }
+}
+
+.service-card.premium-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #a8862e, #f0d060, #d4a832, #f0d060, #a8862e);
+    background-size: 200% 100%;
+    animation: goldShimmer 3s linear infinite;
+}
+
+@keyframes goldShimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
 }
 
 .service-card.premium-card:hover {
-    box-shadow: 0 0 45px rgba(200, 168, 78, 0.35), var(--shadow-xl);
-    border-color: #e6c55a;
+    transform: scale(1.08);
+    box-shadow:
+        0 0 50px rgba(200, 168, 78, 0.3),
+        0 0 80px rgba(200, 168, 78, 0.1),
+        inset 0 1px 0 rgba(240, 208, 96, 0.2),
+        var(--shadow-xl);
 }
 
+/* Gold badge with shine */
 .badge-gold {
     position: absolute;
     top: -14px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(135deg, #d4a832, #f0d060);
-    color: #1c1c2e;
-    font-size: 0.75rem;
+    background: linear-gradient(135deg, #c9982a, #f5dc6e, #c9982a);
+    background-size: 200% 100%;
+    animation: badgeShine 2.5s ease-in-out infinite;
+    color: #1a1730;
+    font-size: 0.72rem;
     font-weight: 800;
-    padding: 6px 20px;
+    padding: 7px 22px;
     border-radius: 50px;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.5px;
     white-space: nowrap;
-    box-shadow: 0 5px 20px rgba(212, 168, 50, 0.5);
+    box-shadow: 0 5px 25px rgba(212, 168, 50, 0.55);
+    z-index: 2;
 }
 
+@keyframes badgeShine {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Crown icon with glow + pulse */
 .icon-premium {
-    background: rgba(200, 168, 78, 0.15) !important;
-    color: #d4a832 !important;
-    box-shadow: 0 0 25px rgba(200, 168, 78, 0.2);
+    background: rgba(200, 168, 78, 0.12) !important;
+    color: #f0d060 !important;
+    box-shadow: 0 0 30px rgba(200, 168, 78, 0.25);
+    animation: iconPulse 3s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(200, 168, 78, 0.2); }
+    50% { box-shadow: 0 0 40px rgba(240, 208, 96, 0.45); }
 }
 
 .service-card.premium-card:hover .icon-premium {
-    box-shadow: 0 0 35px rgba(200, 168, 78, 0.4);
+    box-shadow: 0 0 50px rgba(240, 208, 96, 0.55);
+    transform: scale(1.1);
 }
 
+/* Gold text */
 .service-card.premium-card h3 {
     color: #f0d060;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
 }
 
 .service-card.premium-card p {
@@ -669,7 +733,7 @@ section {
 }
 
 .service-card.premium-card ul li {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.88);
 }
 
 .service-card.premium-card ul li::before {
@@ -678,7 +742,8 @@ section {
 
 .price-premium {
     color: #f0d060 !important;
-    border-top-color: rgba(240, 208, 96, 0.3) !important;
+    border-top: 1px solid rgba(240, 208, 96, 0.25) !important;
+    text-shadow: 0 0 20px rgba(240, 208, 96, 0.3);
 }
 
 .services-note {
