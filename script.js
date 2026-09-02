@@ -102,6 +102,69 @@ document.querySelectorAll('.service-card, .work-card, .process-step, .about-cont
     revealObserver.observe(element);
 });
 
+// Staggered reveal for service cards
+const staggerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const cards = entry.target.querySelectorAll('.service-card');
+            cards.forEach((card, i) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0) scale(1)';
+                }, i * 120);
+            });
+            staggerObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15 });
+
+const servicesSection = document.getElementById('services');
+if (servicesSection) {
+    servicesSection.querySelectorAll('.service-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(40px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    });
+    staggerObserver.observe(servicesSection);
+}
+
+// Scroll Progress Bar
+const progressBar = document.createElement('div');
+progressBar.id = 'scrollProgress';
+document.body.appendChild(progressBar);
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / docHeight) * 100;
+    progressBar.style.width = progress + '%';
+});
+
+// Magnetic hover on buttons
+document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = (e.clientX - rect.left - rect.width / 2) * 0.15;
+        const y = (e.clientY - rect.top - rect.height / 2) * 0.2;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+    btn.addEventListener('mouseleave', () => {
+        btn.style.transform = '';
+    });
+});
+
+// Parallax on About background shapes
+const aboutBg = document.querySelector('.about-bg');
+if (aboutBg) {
+    window.addEventListener('scroll', () => {
+        const rect = aboutBg.parentElement.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            const offset = (window.innerHeight - rect.top) * 0.05;
+            aboutBg.style.transform = `translateY(${offset}px)`;
+        }
+    });
+}
+
 // Smooth scroll with navbar offset
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -186,3 +249,38 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 if (statNum) counterObserver.observe(statNum);
+
+// Custom Cursor
+const cursorDot = document.getElementById('cursorDot');
+const cursorRing = document.getElementById('cursorRing');
+
+let mouseX = 0;
+let mouseY = 0;
+let ringX = 0;
+let ringY = 0;
+
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursorDot.style.left = mouseX + 'px';
+    cursorDot.style.top = mouseY + 'px';
+});
+
+document.addEventListener('mousedown', () => cursorRing.classList.add('down'));
+document.addEventListener('mouseup', () => cursorRing.classList.remove('down'));
+
+// Hover growth on interactive elements
+document.querySelectorAll('a, button, .btn, .service-card, .work-card, .process-step, .t-card').forEach(el => {
+    el.addEventListener('mouseenter', () => cursorRing.classList.add('hovering'));
+    el.addEventListener('mouseleave', () => cursorRing.classList.remove('hovering'));
+});
+
+// Smooth ring follow
+function ringFollow() {
+    ringX += (mouseX - ringX) * 0.15;
+    ringY += (mouseY - ringY) * 0.15;
+    cursorRing.style.left = ringX + 'px';
+    cursorRing.style.top = ringY + 'px';
+    requestAnimationFrame(ringFollow);
+}
+ringFollow();
