@@ -1408,6 +1408,15 @@ section {
     z-index: 1;
 }
 
+.contact-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
 .contact-meta {
     display: flex;
     justify-content: center;

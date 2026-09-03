@@ -72,7 +72,7 @@ appointmentForm.addEventListener('submit', (e) => {
     appButton.innerHTML = '<span class="btn-icon"><i class="fas fa-spinner fa-spin"></i></span> Sending...';
 
     const templateParams = {
-        site_name: 'City Care Medical Clinic',
+        site_name: 'Nishtar Hospital',
         from_name: document.getElementById('app-name').value,
         customer_phone: document.getElementById('app-phone').value,
         app_date: document.getElementById('app-date').value,
