@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lumière Dental Studio — A premium dental experience combining artistry, technology, and compassionate care in the heart of the city.">
+    <title>Lumière Dental Studio — Your Smile, Elevated</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">&#9683;</span>
+                <span class="logo-text">Lumi&egrave;re</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#contact" class="nav-cta">Book a Consultation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <p class="hero-tagline fade-up">A Premium Dental Experience</p>
+            <h1 class="hero-headline fade-up">Your Smile,<br><em>Elevated.</em></h1>
+            <p class="hero-sub fade-up">Where artistry meets advanced dentistry. We craft confident, radiant smiles in a setting designed entirely around your comfort.</p>
+            <a href="#contact" class="btn btn-primary fade-up">Book a Consultation</a>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span></span>
+        </div>
+    </header>
+
+    <!-- About / Philosophy -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content fade-up">
+                    <p class="section-label">Our Philosophy</p>
+                    <h2 class="section-title">Dentistry Reimagined<br>for <em>Modern Living</em></h2>
+                    <p class="about-text">At Lumi&egrave;re Dental Studio, we believe that exceptional dental care goes beyond clinical precision. It&rsquo;s about creating an experience that feels restorative from the moment you walk through our doors.</p>
+                    <p class="about-text">Founded on the principles of personalized care, cutting-edge technology, and an unwavering commitment to patient comfort, our studio blends the warmth of a boutique hospitality experience with the rigor of world-class dentistry.</p>
+                    <p class="about-text">Every smile we craft is a collaboration &mdash; a thoughtful blend of science, artistry, and your unique vision for yourself.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-count="15">0</span><span class="stat-suffix">+</span>
+                            <span class="stat-label">Years of Excellence</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="10000">0</span><span class="stat-suffix">+</span>
+                            <span class="stat-label">Smiles Transformed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="99">0</span><span class="stat-suffix">%</span>
+                            <span class="stat-label">Patient Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual fade-up">
+                    <div class="about-image-stack">
+                        <div class="about-img about-img-1">
+                            <div class="img-placeholder" aria-label="Modern clinic interior with warm lighting and minimalist design">
+                                <span>Clinic Interior</span>
+                            </div>
+                        </div>
+                        <div class="about-img about-img-2">
+                            <div class="img-placeholder" aria-label="Patient receiving personalized dental care">
+                                <span>Patient Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header fade-up">
+                <p class="section-label">What We Offer</p>
+                <h2 class="section-title">Comprehensive Care,<br><em>Artfully Delivered</em></h2>
+                <p class="section-subtitle">From routine wellness to transformative cosmetic procedures, every service is tailored to your individual needs and goals.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-up">
+                    <div class="service-icon-wrap">
+                        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <path d="M24 4C18 4 14 10 14 18c0 6 2 10 4 14l2 8c0 2 2 4 4 4s4-2 4-4l2-8c2-4 4-8 4-14 0-8-4-14-10-14z"/>
+                        </svg>
+                    </div>
+                    <h3>Cosmetic Dentistry</h3>
+                    <p>Porcelain veneers, bonding, and smile makeovers designed to enhance your natural beauty with lifelike, enduring results.</p>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-icon-wrap">
+                        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <circle cx="24" cy="24" r="16"/>
+                            <path d="M18 24h12M24 18v12"/>
+                        </svg>
+                    </div>
+                    <h3>Dental Implants</h3>
+                    <p>Permanent, natural-looking tooth replacement using premium titanium and zirconia systems for optimal comfort and longevity.</p>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-icon-wrap">
+                        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <path d="M24 6l4 8 9 1-7 6 2 9-8-4-8 4 2-9-7-6 9-1z"/>
+                        </svg>
+                    </div>
+                    <h3>Professional Whitening</h3>
+                    <p>Advanced in-office and take-home whitening systems that deliver a brilliantly brighter smile in as little as one visit.</p>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-icon-wrap">
+                        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <rect x="8" y="14" width="32" height="20" rx="4"/>
+                            <path d="M16 14V10a8 8 0 1116 0v4"/>
+                        </svg>
+                    </div>
+                    <h3>Invisalign&reg;</h3>
+                    <p>Discreet, comfortable clear aligner therapy to straighten your teeth without brackets or wires, guided by 3D digital planning.</p>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-icon-wrap">
+                        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <path d="M24 4v40M14 14l10-10 10 10M14 34l10 10 10-10"/>
+                        </svg>
+                    </div>
+                    <h3>Preventive Care</h3>
+                    <p>Comprehensive exams, gentle cleanings, and personalized wellness plans to keep your smile healthy for a lifetime.</p>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-icon-wrap">
+                        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <path d="M12 36c0-12 12-24 24-28M36 12l-8 8 8 8"/>
+                        </svg>
+                    </div>
+                    <h3>Restorative Dentistry</h3>
+                    <p>Crowns, bridges, and full-mouth rehabilitation using biomimetic materials that mimic the look and feel of natural teeth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Dentist(s) -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-header fade-up">
+                <p class="section-label">Meet Our Team</p>
+                <h2 class="section-title">The Artisans Behind<br><em>Your Smile</em></h2>
+                <p class="section-subtitle">Board-certified specialists united by a passion for excellence and a commitment to personalized patient care.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card fade-up">
+                    <div class="team-photo">
+                        <div class="img-placeholder team-img" aria-label="Dr. Elena Marchetti, Lead Cosmetic Dentist">
+                            <span>Dr. Elena Marchetti</span>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Dr. Elena Marchetti</h3>
+                        <p class="team-role">Lead Cosmetic Dentist &amp; Founder</p>
+                        <p class="team-creds">DDS, FACD &bull; NYU College of Dentistry</p>
+                        <p class="team-bio">With over 15 years of experience in cosmetic and restorative dentistry, Dr. Marchetti founded Lumi&egrave;re to redefine what dental care can feel like.</p>
+                    </div>
+                </div>
+                <div class="team-card fade-up">
+                    <div class="team-photo">
+                        <div class="img-placeholder team-img" aria-label="Dr. James Whitford, Prosthodontist">
+                            <span>Dr. James Whitford</span>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Dr. James Whitford</h3>
+                        <p class="team-role">Prosthodontist &amp; Implant Specialist</p>
+                        <p class="team-creds">DMD, MS &bull; Columbia University</p>
+                        <p class="team-bio">Dr. Whitford brings precision artistry to complex restorative cases, specializing in full-arch implants and smile reconstruction.</p>
+                    </div>
+                </div>
+                <div class="team-card fade-up">
+                    <div class="team-photo">
+                        <div class="img-placeholder team-img" aria-label="Dr. Aisha Patel, Orthodontist">
+                            <span>Dr. Aisha Patel</span>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Dr. Aisha Patel</h3>
+                        <p class="team-role">Orthodontist &amp; Invisalign&reg; Diamond Provider</p>
+                        <p class="team-creds">DDS, MS &bull; University of Pennsylvania</p>
+                        <p class="team-bio">A nationally recognized Invisalign provider, Dr. Patel combines digital precision with a gentle approach to create beautifully aligned smiles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before / After Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header fade-up">
+                <p class="section-label">Results</p>
+                <h2 class="section-title">Transformations That<br><em>Speak for Themselves</em></h2>
+                <p class="section-subtitle">Real patients, real results. Explore our gallery of smile transformations.</p>
+            </div>
+            <div class="gallery-grid fade-up">
+                <div class="gallery-item" data-before="Before" data-after="After">
+                    <div class="gallery-images">
+                        <div class="img-placeholder gallery-img" aria-label="Patient smile before treatment">
+                            <span>Before</span>
+                        </div>
+                        <div class="img-placeholder gallery-img gallery-after" aria-label="Patient smile after treatment">
+                            <span>After</span>
+                        </div>
+                    </div>
+                    <div class="gallery-label">Veneers &amp; Whitening</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-images">
+                        <div class="img-placeholder gallery-img" aria-label="Patient smile before Invisalign treatment">
+                            <span>Before</span>
+                        </div>
+                        <div class="img-placeholder gallery-img gallery-after" aria-label="Patient smile after Invisalign treatment">
+                            <span>After</span>
+                        </div>
+                    </div>
+                    <div class="gallery-label">Invisalign&reg; Case</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-images">
+                        <div class="img-placeholder gallery-img" aria-label="Patient smile before implant treatment">
+                            <span>Before</span>
+                        </div>
+                        <div class="img-placeholder gallery-img gallery-after" aria-label="Patient smile after implant treatment">
+                            <span>After</span>
+                        </div>
+                    </div>
+                    <div class="gallery-label">Full Smile Restoration</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-images">
+                        <div class="img-placeholder gallery-img" aria-label="Patient smile before cosmetic bonding">
+                            <span>Before</span>
+                        </div>
+                        <div class="img-placeholder gallery-img gallery-after" aria-label="Patient smile after cosmetic bonding">
+                            <span>After</span>
+                        </div>
+                    </div>
+                    <div class="gallery-label">Cosmetic Bonding</div>
+                </div>
+            </div>
+            <p class="gallery-note fade-up">* Individual results may vary. All treatments performed by licensed dental professionals at Lumi&egrave;re Dental Studio.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header fade-up">
+                <p class="section-label">Patient Stories</p>
+                <h2 class="section-title">What Our Patients<br><em>Say About Us</em></h2>
+            </div>
+            <div class="testimonial-carousel fade-up">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-slide active">
+                        <blockquote>
+                            <p>&ldquo;Walking into Lumi&egrave;re feels like stepping into a sanctuary. Dr. Marchetti didn&rsquo;t just fix my teeth &mdash; she understood the smile I&rsquo;ve always wanted and made it a reality. I can&rsquo;t stop smiling.&rdquo;</p>
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <strong>Sarah K.</strong>
+                            <span>Veneers &amp; Whitening</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <blockquote>
+                            <p>&ldquo;I&rsquo;ve always been terrified of the dentist. The team at Lumi&egrave;re changed everything. The environment, the gentleness, the attention to detail &mdash; it&rsquo;s like nothing I&rsquo;ve experienced before.&rdquo;</p>
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <strong>Michael T.</strong>
+                            <span>Invisalign&reg; Patient</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <blockquote>
+                            <p>&ldquo;After losing a tooth, I thought my smile days were over. Dr. Whitford gave me an implant so natural I forget it&rsquo;s there. The technology, the care, the results &mdash; absolutely world-class.&rdquo;</p>
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <strong>Rebecca L.</strong>
+                            <span>Dental Implant</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <blockquote>
+                            <p>&ldquo;From the moment I booked online to my final follow-up, every detail was considered. They even remembered my coffee order. This is what healthcare should feel like.&rdquo;</p>
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <strong>David C.</strong>
+                            <span>Full Smile Makeover</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-btn prev" id="testimonialPrev" aria-label="Previous testimonial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <div class="testimonial-dots" id="testimonialDots"></div>
+                    <button class="testimonial-btn next" id="testimonialNext" aria-label="Next testimonial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology / Facility -->
+    <section class="technology" id="technology">
+        <div class="container">
+            <div class="section-header fade-up">
+                <p class="section-label">Our Technology</p>
+                <h2 class="section-title">State-of-the-Art,<br><em>Down to Every Detail</em></h2>
+                <p class="section-subtitle">We invest in the most advanced dental technology to ensure precision, comfort, and exceptional outcomes.</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card fade-up">
+                    <div class="tech-number">01</div>
+                    <h3>3D Digital Scanning</h3>
+                    <p>Impression-free digital scans for perfectly fitting restorations and aligners, eliminating uncomfortable traditional molds.</p>
+                </div>
+                <div class="tech-card fade-up">
+                    <div class="tech-number">02</div>
+                    <h3>CEREC&reg; Same-Day Crowns</h3>
+                    <p>Custom ceramic crowns designed and fabricated in a single visit, saving you time without compromising quality.</p>
+                </div>
+                <div class="tech-card fade-up">
+                    <div class="tech-number">03</div>
+                    <h3>Digital Smile Design</h3>
+                    <p>Preview your new smile before treatment begins with our advanced digital simulation software.</p>
+                </div>
+                <div class="tech-card fade-up">
+                    <div class="tech-number">04</div>
+                    <h3>Advanced Sterilization</h3>
+                    <p>Hospital-grade sterilization protocols exceed CDC and OSHA standards, ensuring your safety at every visit.</p>
+                </div>
+                <div class="tech-card fade-up">
+                    <div class="tech-number">05</div>
+                    <h3>Spa-Like Amenities</h3>
+                    <p>Warm towels, noise-cancelling headphones, aromatherapy, and a curated beverage bar for your comfort.</p>
+                </div>
+                <div class="tech-card fade-up">
+                    <div class="tech-number">06</div>
+                    <h3>Comfort-First Sedation</h3>
+                    <p>Multiple sedation options including nitrous oxide and oral sedation for a completely relaxed experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking / Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info fade-up">
+                    <p class="section-label">Get in Touch</p>
+                    <h2 class="section-title">Begin Your<br><em>Smile Journey</em></h2>
+                    <p class="contact-text">Ready to experience dentistry reimagined? Schedule your complimentary consultation today and discover what&rsquo;s possible.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            <div>
+                                <strong>Phone</strong>
+                                <a href="tel:+15551234567">(555) 123-4567</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:hello@lumieredental.com">hello@lumieredental.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <div>
+                                <strong>Location</strong>
+                                <span>742 Park Avenue, Suite 800<br>New York, NY 10021</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            <div>
+                                <strong>Hours</strong>
+                                <span>Mon&ndash;Fri: 8:00 AM &ndash; 6:00 PM<br>Saturday: 9:00 AM &ndash; 2:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrap fade-up">
+                    <h3>Book Your Consultation</h3>
+                    <form id="bookingForm" class="booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service of Interest</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="cosmetic">Cosmetic Dentistry</option>
+                                <option value="implants">Dental Implants</option>
+                                <option value="whitening">Professional Whitening</option>
+                                <option value="invisalign">Invisalign&reg;</option>
+                                <option value="preventive">Preventive Care</option>
+                                <option value="restorative">Restorative Dentistry</option>
+                                <option value="consultation">General Consultation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message <span class="optional">(Optional)</span></label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your goals or any questions you have..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Request Appointment</button>
+                    </form>
+                    <div id="formSuccess" class="form-success" style="display:none;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <h4>Thank You!</h4>
+                        <p>Your consultation request has been received. Our team will reach out within 24 hours to confirm your appointment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo footer-logo">
+                        <span class="logo-icon">&#9683;</span>
+                        <span class="logo-text">Lumi&egrave;re</span>
+                    </a>
+                    <p>A premium dental experience combining artistry, technology, and compassionate care.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Cosmetic Dentistry</a></li>
+                        <li><a href="#services">Dental Implants</a></li>
+                        <li><a href="#services">Invisalign&reg;</a></li>
+                        <li><a href="#services">Teeth Whitening</a></li>
+                        <li><a href="#services">Preventive Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-trust">
+                    <h4>Trust &amp; Credentials</h4>
+                    <ul>
+                        <li>American Dental Association</li>
+                        <li>Academy of Cosmetic Dentistry</li>
+                        <li>Invisalign&reg; Diamond Provider</li>
+                        <li>Top Dentist &mdash; NYC 2024</li>
+                    </ul>
+                    <div class="footer-insurance">
+                        <h4>Insurance Accepted</h4>
+                        <p>We work with most major insurance providers. Contact us for verification.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lumi&egrave;re Dental Studio. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox" style="display:none;">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="lightbox-next" id="lightboxNext" aria-label="Next image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="lightbox-content" id="lightboxContent"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
