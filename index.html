@@ -147,14 +147,14 @@
   .service-card.featured{
     background:linear-gradient(180deg, #1E1A10, #16161C 55%);
     border-color:rgba(203,163,92,0.5);
-    transform:scale(1.04);
   }
-  .service-card.featured:hover{transform:scale(1.04) translateY(-4px);}
+  .service-card.featured:hover{transform:translateY(-4px);}
   @media(max-width:900px){.service-card.featured{transform:none;}.service-card.featured:hover{transform:translateY(-4px);}}
   .service-card .ribbon{
     display:inline-block;font-size:10.5px;color:var(--gold-bright);letter-spacing:0.05em;text-transform:uppercase;
     border:1px solid rgba(228,197,137,0.4);border-radius:20px;padding:4px 12px;margin-bottom:18px;align-self:flex-start;
   }
+  .service-card:not(.featured)::before{content:"";display:block;height:22px;margin-bottom:18px;}
   .service-card .tier-label{font-size:11.5px;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:8px;}
   .service-card h3{font-size:24px;margin-bottom:10px;}
   .service-card .desc{font-size:13.5px;color:var(--muted);margin-bottom:22px;min-height:76px;line-height:1.55;}
