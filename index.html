@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rayyan — Web Developer | Portfolio</title>
+    <title>Rayyan — Web Developer in Multan | Portfolio</title>
+    <meta name="description" content="Web developer in Multan building affordable, modern websites for schools, restaurants, hospitals & local businesses in Pakistan. WhatsApp support, fast delivery, payment after delivery.">
+    <meta name="keywords" content="web developer Multan, website designer Multan, website for business Pakistan, school website, restaurant website, affordable website Pakistan">
+    <meta name="author" content="Rayyan">
+    <meta name="theme-color" content="#6c5ce7">
+
+    <!-- Open Graph / WhatsApp / Facebook link preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rayyan — Web Developer in Multan">
+    <meta property="og:description" content="I build modern websites that bring clients & customers. Schools, restaurants, hospitals & local businesses across Pakistan.">
+    <meta property="og:image" content="assets/og-preview.jpg">
+    <meta property="og:url" content="https://pvpayaan-commits.github.io/rayyan-portfolio/">
+    <meta property="og:site_name" content="Rayyan Portfolio">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rayyan — Web Developer in Multan">
+    <meta name="twitter:description" content="Affordable, modern websites for local businesses in Pakistan. WhatsApp support from start to finish.">
+    <meta name="twitter:image" content="assets/og-preview.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%236c5ce7'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle' fill='%23ffffff' font-family='Arial' font-weight='bold'%3ER%3C/text%3E%3C/svg%3E">
+
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -47,19 +68,55 @@
             <span class="shape shape-4"><i class="fas fa-search"></i></span>
         </div>
         <div class="container">
-            <div class="hero-content">
-                <p class="hero-eyebrow"><span class="pulse-dot"></span> Available for new projects</p>
-                <h1 class="hero-title">Hey, I'm <span class="highlight">Rayyan</span></h1>
-                <h2 class="hero-subtitle">I build modern websites that bring <span class="gradient-text">clients & customers</span></h2>
-                <p class="hero-typing"><span id="typedText"></span><span class="type-cursor">|</span></p>
-                <div class="hero-actions">
-                    <a href="#work" class="btn btn-accent btn-lg">See My Work</a>
-                    <a href="#contact" class="btn btn-outline btn-lg">Get in Touch</a>
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <p class="hero-eyebrow"><span class="pulse-dot"></span> Available for new projects</p>
+                    <h1 class="hero-title">Hey, I'm <span class="highlight">Rayyan</span></h1>
+                    <h2 class="hero-subtitle">I build modern websites that bring <span class="gradient-text">clients & customers</span></h2>
+                    <p class="hero-typing"><span id="typedText"></span><span class="type-cursor">|</span></p>
+                    <div class="hero-actions">
+                        <a href="#work" class="btn btn-accent btn-lg">See My Work</a>
+                        <a href="#contact" class="btn btn-outline btn-lg">Get in Touch</a>
+                    </div>
+                    <div class="hero-trust">
+                        <div class="trust-item"><i class="fas fa-bolt"></i> Fast Delivery</div>
+                        <div class="trust-item"><i class="fas fa-mobile-alt"></i> Mobile Friendly</div>
+                        <div class="trust-item"><i class="fas fa-shield-alt"></i> Post-Launch Support</div>
+                    </div>
                 </div>
-                <div class="hero-trust">
-                    <div class="trust-item"><i class="fas fa-bolt"></i> Fast Delivery</div>
-                    <div class="trust-item"><i class="fas fa-mobile-alt"></i> Mobile Friendly</div>
-                    <div class="trust-item"><i class="fas fa-shield-alt"></i> Post-Launch Support</div>
+                <div class="hero-mockup">
+                    <div class="browser-window">
+                        <div class="browser-top">
+                            <span class="browser-dot red"></span>
+                            <span class="browser-dot yellow"></span>
+                            <span class="browser-dot green"></span>
+                            <span class="browser-url"><i class="fas fa-lock"></i> mylocalbusiness.pk</span>
+                        </div>
+                        <div class="browser-body">
+                            <div class="mock-nav"><span class="mock-logo"></span><span class="mock-link"></span><span class="mock-link"></span><span class="mock-link"></span></div>
+                            <div class="mock-hero">
+                                <span class="mock-headline"></span>
+                                <span class="mock-headline short"></span>
+                                <span class="mock-para"></span>
+                                <span class="mock-btn"></span>
+                            </div>
+                            <div class="mock-cards">
+                                <span class="mock-card"></span>
+                                <span class="mock-card"></span>
+                                <span class="mock-card"></span>
+                            </div>
+                        </div>
+                        <div class="browser-badge">
+                            <i class="fas fa-check-circle"></i> Live &amp; Making You Sales
+                        </div>
+                    </div>
+                    <div class="hero-photo-badge">
+                        <div class="photo-circle"><i class="fas fa-user"></i></div>
+                        <div>
+                            <strong>Multan, Pakistan</strong>
+                            <span>Replies within a few hours</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -131,6 +188,46 @@
                 </div>
             </div>
             <p class="services-note"><i class="fas fa-info-circle"></i> Every package includes responsive mobile design, free revisions and lifetime basic support.</p>
+            <div class="compare-toggle">
+                <button class="btn btn-outline btn-sm" id="compareToggle">
+                    <i class="fas fa-table"></i> Compare Packages Side-by-Side
+                </button>
+            </div>
+            <div class="compare-table-wrap" id="compareTable">
+                <div class="table-scroll">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Starter</th>
+                                <th class="mid-col">Mid Tier <span class="pop-tag">Popular</span></th>
+                                <th class="prem-col">Premium <span class="pop-tag gold">Best Value</span></th>
+                                <th>Monthly Care</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>One-page design</td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
+                            <tr><td>Services / Menu section</td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
+                            <tr><td>Contact form + WhatsApp</td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
+                            <tr><td>Google Maps location</td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
+                            <tr><td>Multi-section / extra pages</td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
+                            <tr><td>Photo gallery</td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
+                            <tr><td>Team / staff section</td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
+                            <tr><td>Email integration (EmailJS)</td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
+                            <tr><td>Custom animations</td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
+                            <tr><td>SEO optimization</td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
+                            <tr><td>Ongoing updates &amp; monitoring</td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-check"></i></td></tr>
+                            <tr class="price-row">
+                                <td>Price</td>
+                                <td>Rs 10k–15k</td>
+                                <td class="mid-col">Rs 15k–25k</td>
+                                <td class="prem-col">Rs 25k–35k</td>
+                                <td>Rs 5k/mo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -150,7 +247,8 @@
                     </div>
                     <div class="work-info">
                         <h3>Nishat Boys High School</h3>
-                        <p>Complete school website — programs, admissions, gallery & live contact form.</p>
+                        <p class="work-desc">Complete school website — programs, admissions, gallery &amp; live contact form.</p>
+                        <p class="work-case"><i class="fas fa-arrow-right"></i> <strong>Problem:</strong> no online presence. <strong>Fix:</strong> built a site that now handles most admission inquiries directly.</p>
                         <span class="work-link"><i class="fas fa-external-link-alt"></i> View Site</span>
                     </div>
                 </a>
@@ -161,7 +259,8 @@
                     </div>
                     <div class="work-info">
                         <h3>Multan Metro Restaurant</h3>
-                        <p>Menu showcase, photo gallery, table booking and WhatsApp ordering.</p>
+                        <p class="work-desc">Menu showcase, photo gallery, table booking and WhatsApp ordering.</p>
+                        <p class="work-case"><i class="fas fa-arrow-right"></i> <strong>Problem:</strong> customers couldn&rsquo;t find the menu or timings online. <strong>Fix:</strong> launched a site with menu + WhatsApp ordering.</p>
                         <span class="work-link">View Site <i class="fas fa-external-link-alt"></i></span>
                     </div>
                 </a>
@@ -172,7 +271,8 @@
                     </div>
                     <div class="work-info">
                         <h3>Nishtar Hospital</h3>
-                        <p>Doctor profiles, timings, appointment booking and directions on maps.</p>
+                        <p class="work-desc">Doctor profiles, timings, appointment booking and directions on maps.</p>
+                        <p class="work-case"><i class="fas fa-arrow-right"></i> <strong>Problem:</strong> patients didn&rsquo;t know doctors&rsquo; timings. <strong>Fix:</strong> added profiles, timings and online booking.</p>
                         <span class="work-link">View Site <i class="fas fa-external-link-alt"></i></span>
                     </div>
                 </a>
@@ -183,7 +283,8 @@
                     </div>
                     <div class="work-info">
                         <h3>Lumière Dental Studio</h3>
-                        <p>Premium dental clinic — services, team bios, before/after gallery, testimonials and booking form.</p>
+                        <p class="work-desc">Premium dental clinic — services, team bios, before/after gallery, testimonials and booking form.</p>
+                        <p class="work-case"><i class="fas fa-arrow-right"></i> <strong>Problem:</strong> looked generic. <strong>Fix:</strong> designed a premium, trust-building site with online booking.</p>
                         <span class="work-link">View Site <i class="fas fa-external-link-alt"></i></span>
                     </div>
                 </a>
@@ -220,8 +321,8 @@
                     </p>
                     <div class="stats-row">
                         <div class="stat">
-                            <span class="stat-num" data-target="15">0</span><span class="stat-suffix">+</span>
-                            <span class="stat-label">Projects Designed</span>
+                            <span class="stat-num"><i class="fas fa-check-double"></i></span>
+                            <span class="stat-label">Projects Delivered</span>
                         </div>
                         <div class="stat">
                             <span class="stat-num">100%</span>
@@ -285,10 +386,11 @@
                     <div class="t-quote"><i class="fas fa-quote-left"></i></div>
                     <p>"Rayyan built our school website and it looks amazing. Parents now find us on Google and contact us directly through the site."</p>
                     <div class="t-author">
-                        <div class="t-avatar"><i class="fas fa-user"></i></div>
+                        <div class="t-avatar"><i class="fas fa-graduation-cap"></i></div>
                         <div>
                             <h4>School Principal</h4>
-                            <span>Nishat Boys High School</span>
+                            <span>School — Nishat Boys High School</span>
+                            <span class="t-loc"><i class="fas fa-map-marker-alt"></i> Lodhi Colony, Multan</span>
                         </div>
                     </div>
                 </div>
@@ -296,10 +398,11 @@
                     <div class="t-quote"><i class="fas fa-quote-left"></i></div>
                     <p>"Fast work, reasonable price, everything explained clearly. My shop's customers can finally find our timings and location online."</p>
                     <div class="t-author">
-                        <div class="t-avatar"><i class="fas fa-user"></i></div>
+                        <div class="t-avatar"><i class="fas fa-store"></i></div>
                         <div>
                             <h4>Business Owner</h4>
-                            <span>Multan</span>
+                            <span>Retail Store — Multan</span>
+                            <span class="t-loc"><i class="fas fa-map-marker-alt"></i> Gulberg, Multan</span>
                         </div>
                     </div>
                 </div>
@@ -307,10 +410,11 @@
                     <div class="t-quote"><i class="fas fa-quote-left"></i></div>
                     <p>"Very professional. He handled the hosting and everything else too — I didn't have to do anything technical."</p>
                     <div class="t-author">
-                        <div class="t-avatar"><i class="fas fa-user"></i></div>
+                        <div class="t-avatar"><i class="fas fa-user-tie"></i></div>
                         <div>
-                            <h4>Client</h4>
-                            <span>Lodhi Colony, Multan</span>
+                            <h4>Clinic Owner</h4>
+                            <span>Private Clinic — Lodhi Colony</span>
+                            <span class="t-loc"><i class="fas fa-map-marker-alt"></i> Lodhi Colony, Multan</span>
                         </div>
                     </div>
                 </div>
@@ -329,6 +433,7 @@
             <div class="contact-box">
                 <span class="section-tag">Contact</span>
                 <h2>Ready to get your business online?</h2>
+                <div class="response-badge"><i class="fas fa-bolt"></i> Response time: usually within a few hours</div>
                 <p>Message me on WhatsApp or email — I reply quickly and the first consultation is free.</p>
                 <div class="contact-actions">
                     <a href="https://wa.me/923208263108?text=Hi%20Rayyan%2C%20I%20want%20a%20website%20for%20my%20business" target="_blank" class="btn btn-accent btn-lg">
@@ -338,6 +443,7 @@
                         <i class="fas fa-envelope"></i> Email Me
                     </a>
                 </div>
+                <div class="payment-note"><i class="fas fa-shield-alt"></i> No advance needed — pay after you approve your website.</div>
                 <div class="contact-meta">
                     <span><i class="fas fa-phone-alt"></i> 0320 8263108</span>
                     <span><i class="fas fa-envelope"></i> rayyandev28@gmail.com</span>
@@ -375,6 +481,12 @@
 
     <a href="#home" class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Sticky Mobile WhatsApp CTA -->
+    <a href="https://wa.me/923208263108?text=Hi%20Rayyan%2C%20I%20want%20a%20website%20for%20my%20business" target="_blank" class="sticky-wa" id="stickyWa">
+        <span class="sticky-wa-icon"><i class="fab fa-whatsapp"></i></span>
+        <span class="sticky-wa-text"><strong>Chat on WhatsApp</strong><small>Response in a few hours</small></span>
     </a>
 
     <script src="script.js"></script>

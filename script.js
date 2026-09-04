@@ -249,3 +249,34 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 if (statNum) counterObserver.observe(statNum);
+
+// ===== Pricing Comparison Table Toggle =====
+const compareToggle = document.getElementById('compareToggle');
+const compareTable = document.getElementById('compareTable');
+
+if (compareToggle && compareTable) {
+    compareToggle.addEventListener('click', () => {
+        compareTable.classList.toggle('open');
+        compareToggle.innerHTML = compareTable.classList.contains('open')
+            ? '<i class="fas fa-table"></i> Hide Comparison'
+            : '<i class="fas fa-table"></i> Compare Packages Side-by-Side';
+    });
+}
+
+// ===== Sticky Mobile WhatsApp CTA =====
+const stickyWa = document.getElementById('stickyWa');
+let stickyWaShown = false;
+
+window.addEventListener('scroll', () => {
+    if (!stickyWa) return;
+    if (window.innerWidth <= 768) {
+        // Show after scrolling past the hero
+        if (window.scrollY > 550 && !stickyWaShown) {
+            stickyWa.classList.add('show');
+            stickyWaShown = true;
+        } else if (window.scrollY <= 550 && stickyWaShown) {
+            stickyWa.classList.remove('show');
+            stickyWaShown = false;
+        }
+    }
+});
