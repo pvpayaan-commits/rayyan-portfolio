@@ -1,494 +1,471 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rayyan — Web Developer in Multan | Portfolio</title>
-    <meta name="description" content="Web developer in Multan building affordable, modern websites for schools, restaurants, hospitals & local businesses in Pakistan. WhatsApp support, fast delivery, payment after delivery.">
-    <meta name="keywords" content="web developer Multan, website designer Multan, website for business Pakistan, school website, restaurant website, affordable website Pakistan">
-    <meta name="author" content="Rayyan">
-    <meta name="theme-color" content="#6c5ce7">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rayyan — Web Developer, Multan</title>
+<meta name="description" content="Web developer in Multan building clean, fast, professional websites for schools, clinics, restaurants and shops in Pakistan. WhatsApp support, payment after delivery.">
+<meta name="keywords" content="web developer Multan, website designer Multan, website for business Pakistan, school website, restaurant website">
+<meta name="author" content="Rayyan">
+<meta name="theme-color" content="#0B0B0E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rayyan — Web Developer, Multan">
+<meta property="og:description" content="Websites that make your business feel established. Clean, fast, professional sites for schools, clinics, restaurants and shops across Pakistan.">
+<meta property="og:url" content="https://pvpayaan-commits.github.io/rayyan-portfolio/">
+<meta property="og:site_name" content="Rayyan Portfolio">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0B0E;
+    --bg-alt:#111116;
+    --panel:#16161C;
+    --gold:#CBA35C;
+    --gold-bright:#E4C589;
+    --ivory:#F3EFE7;
+    --muted:#8C8A85;
+    --line:rgba(243,239,231,0.09);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ivory);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:500;
+    line-height:1.08;
+    color:var(--ivory);
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 40px;}
+  @media(max-width:640px){.wrap{padding:0 22px;}}
 
-    <!-- Open Graph / WhatsApp / Facebook link preview -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Rayyan — Web Developer in Multan">
-    <meta property="og:description" content="I build modern websites that bring clients & customers. Schools, restaurants, hospitals & local businesses across Pakistan.">
-    <meta property="og:image" content="assets/og-preview.jpg">
-    <meta property="og:url" content="https://pvpayaan-commits.github.io/rayyan-portfolio/">
-    <meta property="og:site_name" content="Rayyan Portfolio">
+  /* header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(11,11,14,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0;}
+  .logo{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--ivory);letter-spacing:0.02em;}
+  .logo span{color:var(--gold);}
+  .nav-links{display:flex;gap:40px;font-size:13px;letter-spacing:0.04em;color:var(--muted);}
+  .nav-links a{transition:color .2s;}
+  .nav-links a:hover{color:var(--gold-bright);}
+  .nav-cta{
+    border:1px solid var(--gold);color:var(--gold-bright);
+    padding:10px 22px;font-size:13px;letter-spacing:0.03em;
+    border-radius:2px;transition:all .25s;
+  }
+  .nav-cta:hover{background:var(--gold);color:var(--bg);}
+  @media(max-width:840px){.nav-links{display:none;}}
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rayyan — Web Developer in Multan">
-    <meta name="twitter:description" content="Affordable, modern websites for local businesses in Pakistan. WhatsApp support from start to finish.">
-    <meta name="twitter:image" content="assets/og-preview.jpg">
+  /* hero */
+  .hero{
+    position:relative;padding:150px 0 130px;overflow:hidden;
+    text-align:center;
+  }
+  .hero::before{
+    content:"";position:absolute;top:-200px;left:50%;transform:translateX(-50%);
+    width:900px;height:900px;border-radius:50%;
+    background:radial-gradient(circle, rgba(203,163,92,0.14) 0%, rgba(203,163,92,0) 65%);
+    pointer-events:none;
+  }
+  .status{
+    position:relative;display:inline-flex;align-items:center;gap:9px;
+    font-size:12.5px;letter-spacing:0.06em;color:var(--muted);
+    margin-bottom:32px;text-transform:uppercase;
+  }
+  .status .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold);}
+  .hero h1{
+    position:relative;
+    font-size:clamp(42px,7vw,78px);
+    max-width:14ch;margin:0 auto 26px;
+    animation:riseIn 1s cubic-bezier(.19,1,.22,1) both;
+  }
+  .hero h1 em{font-style:italic;color:var(--gold-bright);}
+  .hero p.lede{
+    position:relative;
+    font-size:18px;max-width:46ch;margin:0 auto 40px;color:var(--muted);
+  }
+  .hero-actions{position:relative;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .btn-primary{
+    background:linear-gradient(135deg, var(--gold-bright), var(--gold));
+    color:#1a1508;font-weight:600;
+    padding:15px 30px;font-size:14.5px;border-radius:3px;
+    box-shadow:0 8px 24px rgba(203,163,92,0.25);
+    transition:transform .2s, box-shadow .2s;
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(203,163,92,0.35);}
+  .btn-secondary{
+    border:1px solid var(--line);color:var(--ivory);
+    padding:15px 30px;font-size:14.5px;border-radius:3px;
+    transition:border-color .2s;
+  }
+  .btn-secondary:hover{border-color:var(--gold);}
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%236c5ce7'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle' fill='%23ffffff' font-family='Arial' font-weight='bold'%3ER%3C/text%3E%3C/svg%3E">
+  @keyframes riseIn{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
 
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  .stats-strip{
+    display:flex;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  .stats-strip div{
+    flex:1;padding:26px 0;text-align:center;
+    border-right:1px solid var(--line);
+  }
+  .stats-strip div:last-child{border-right:none;}
+  .stats-strip .num{font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--gold-bright);display:block;}
+  .stats-strip .label{font-size:12.5px;color:var(--muted);letter-spacing:0.03em;margin-top:4px;}
+  @media(max-width:640px){.stats-strip{flex-direction:column;}.stats-strip div{border-right:none;border-bottom:1px solid var(--line);}}
+
+  section{padding:110px 0;}
+  .eyebrow{font-size:12.5px;color:var(--gold);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px;}
+  .section-head{max-width:640px;margin:0 auto 64px;text-align:center;}
+  .section-head h2{font-size:clamp(32px,4vw,44px);}
+  .section-head p{margin-top:16px;color:var(--muted);font-size:16px;max-width:52ch;margin-left:auto;margin-right:auto;}
+
+  /* services */
+  .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:stretch;}
+  @media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.services-grid{grid-template-columns:1fr;}}
+  .service-card{
+    background:var(--panel);border:1px solid var(--line);border-radius:8px;
+    padding:34px 30px 30px;
+    display:flex;flex-direction:column;
+    transition:transform .25s, border-color .25s;
+    position:relative;
+  }
+  .service-card:hover{transform:translateY(-4px);border-color:rgba(203,163,92,0.3);}
+  .service-card.featured{
+    background:linear-gradient(180deg, #1E1A10, #16161C 55%);
+    border-color:rgba(203,163,92,0.5);
+    transform:scale(1.04);
+  }
+  .service-card.featured:hover{transform:scale(1.04) translateY(-4px);}
+  @media(max-width:900px){.service-card.featured{transform:none;}.service-card.featured:hover{transform:translateY(-4px);}}
+  .service-card .ribbon{
+    display:inline-block;font-size:10.5px;color:var(--gold-bright);letter-spacing:0.05em;text-transform:uppercase;
+    border:1px solid rgba(228,197,137,0.4);border-radius:20px;padding:4px 12px;margin-bottom:18px;align-self:flex-start;
+  }
+  .service-card .tier-label{font-size:11.5px;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:8px;}
+  .service-card h3{font-size:24px;margin-bottom:10px;}
+  .service-card .desc{font-size:13.5px;color:var(--muted);margin-bottom:22px;min-height:50px;line-height:1.55;}
+  .service-card .price{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold-bright);margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--line);}
+  .service-card .price small{font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);display:block;margin-top:2px;font-style:normal;}
+  .service-card .features{list-style:none;margin-top:auto;display:flex;flex-direction:column;gap:11px;}
+  .service-card .features li{
+    font-size:13px;color:var(--ivory);opacity:0.85;
+    display:flex;align-items:flex-start;gap:9px;line-height:1.4;
+  }
+  .service-card .features li::before{
+    content:"";flex-shrink:0;width:14px;height:14px;margin-top:2px;border-radius:50%;
+    background:rgba(203,163,92,0.15);
+    box-shadow:inset 0 0 0 1px rgba(203,163,92,0.5);
+    position:relative;
+  }
+  .service-card .features li::after{
+    content:"✓";position:absolute;color:var(--gold-bright);font-size:9px;font-weight:700;
+    margin-left:3px;margin-top:2.5px;
+  }
+  .service-card .cta{
+    margin-top:26px;text-align:center;padding:12px;font-size:13.5px;font-weight:500;
+    border:1px solid var(--line);border-radius:4px;transition:all .2s;
+  }
+  .service-card.featured .cta{background:linear-gradient(135deg, var(--gold-bright), var(--gold));color:#1a1508;border-color:transparent;font-weight:600;}
+  .service-card:not(.featured) .cta:hover{border-color:var(--gold);color:var(--gold-bright);}
+
+  /* work */
+  .work-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  @media(max-width:768px){.work-grid{grid-template-columns:1fr;}}
+  .work-item{
+    background:var(--panel);border:1px solid var(--line);border-radius:6px;
+    padding:40px;position:relative;overflow:hidden;
+    transition:border-color .25s, transform .25s;
+  }
+  .work-item:hover{border-color:rgba(203,163,92,0.4);transform:translateY(-3px);}
+  .work-item::after{
+    content:"";position:absolute;top:0;right:0;width:160px;height:160px;
+    background:radial-gradient(circle, rgba(203,163,92,0.08), transparent 70%);
+    pointer-events:none;
+  }
+  .work-tag{font-size:11.5px;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px;}
+  .work-item h3{font-size:26px;margin-bottom:14px;}
+  .work-item p{font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6;}
+  .work-link{font-size:13.5px;color:var(--gold-bright);border-bottom:1px solid rgba(228,197,137,0.35);padding-bottom:2px;}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;align-items:center;}
+  @media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:36px;}}
+  .about-visual{
+    aspect-ratio:4/5;border-radius:6px;
+    background:linear-gradient(160deg, #1c1a14 0%, #0B0B0E 70%);
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .about-visual .mark{font-family:'Cormorant Garamond',serif;font-size:80px;color:var(--gold);opacity:0.5;font-style:italic;}
+  .about-text p{color:var(--muted);font-size:16.5px;margin-bottom:18px;}
+  .about-text strong{color:var(--ivory);font-weight:500;}
+
+  /* process */
+  .process-list{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+  @media(max-width:768px){.process-list{grid-template-columns:1fr;}}
+  .process-item{background:var(--panel);padding:34px 26px;}
+  .process-item .step{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:30px;color:var(--gold);margin-bottom:14px;display:block;}
+  .process-item h3{font-size:18px;margin-bottom:8px;}
+  .process-item p{font-size:13.5px;color:var(--muted);}
+
+  /* testimonials */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  @media(max-width:900px){.testi-grid{grid-template-columns:1fr;}}
+  .testi-item{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:34px;}
+  .testi-item .stars{color:var(--gold);font-size:14px;margin-bottom:18px;letter-spacing:2px;}
+  .testi-item p.quote{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;margin-bottom:22px;line-height:1.45;}
+  .testi-item .who{font-size:13.5px;font-weight:600;}
+  .testi-item .where{font-size:12.5px;color:var(--muted);}
+
+  /* contact */
+  .contact-box{
+    background:linear-gradient(135deg, #16161C, #0B0B0E);
+    border:1px solid var(--line);border-radius:8px;
+    padding:72px 56px;text-align:center;position:relative;overflow:hidden;
+  }
+  .contact-box::before{
+    content:"";position:absolute;bottom:-150px;left:50%;transform:translateX(-50%);
+    width:700px;height:400px;
+    background:radial-gradient(ellipse, rgba(203,163,92,0.12), transparent 70%);
+  }
+  .contact-box h2{position:relative;font-size:clamp(32px,4.5vw,48px);margin-bottom:16px;}
+  .contact-box p{position:relative;color:var(--muted);max-width:44ch;margin:0 auto 36px;}
+  .contact-links{position:relative;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .contact-links a{font-size:14px;font-weight:500;}
+
+  footer{border-top:1px solid var(--line);padding:36px 0;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);}
+  @media(max-width:640px){footer{flex-direction:column;gap:10px;text-align:center;}}
+</style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <a href="#home" class="brand">Rayyan<span>.</span></a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#work">My Work</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="https://wa.me/923208263108" target="_blank" class="btn btn-accent nav-cta">
-                <i class="fab fa-whatsapp"></i> Hire Me
-            </a>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+<header>
+  <nav class="wrap">
+    <div class="logo">Rayyan<span>.</span></div>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="#contact">Start a project</a>
+  </nav>
+</header>
 
-    <!-- Hero -->
-    <section class="hero" id="home">
-        <div class="hero-bg">
-            <span class="bg-dot dot-1"></span>
-            <span class="bg-dot dot-2"></span>
-            <span class="bg-dot dot-3"></span>
-            <i class="fas fa-code bg-icon icon-1"></i>
-            <i class="fas fa-laptop-code bg-icon icon-2"></i>
-            <i class="fas fa-laptop-code bg-icon icon-3"></i>
-            <span class="shape shape-1"><i class="fas fa-globe"></i></span>
-            <span class="shape shape-2"><i class="fas fa-palette"></i></span>
-            <span class="shape shape-3"><i class="fas fa-mobile-alt"></i></span>
-            <span class="shape shape-4"><i class="fas fa-search"></i></span>
-        </div>
-        <div class="container">
-            <div class="hero-inner">
-                <div class="hero-content">
-                    <p class="hero-eyebrow"><span class="pulse-dot"></span> Available for new projects</p>
-                    <h1 class="hero-title">Hey, I'm <span class="highlight">Rayyan</span></h1>
-                    <h2 class="hero-subtitle">I build modern websites that bring <span class="gradient-text">clients & customers</span></h2>
-                    <p class="hero-typing"><span id="typedText"></span><span class="type-cursor">|</span></p>
-                    <div class="hero-actions">
-                        <a href="#work" class="btn btn-accent btn-lg">See My Work</a>
-                        <a href="#contact" class="btn btn-outline btn-lg">Get in Touch</a>
-                    </div>
-                    <div class="hero-trust">
-                        <div class="trust-item"><i class="fas fa-bolt"></i> Fast Delivery</div>
-                        <div class="trust-item"><i class="fas fa-mobile-alt"></i> Mobile Friendly</div>
-                        <div class="trust-item"><i class="fas fa-shield-alt"></i> Post-Launch Support</div>
-                    </div>
-                </div>
-                <div class="hero-mockup">
-                    <div class="browser-window">
-                        <div class="browser-top">
-                            <span class="browser-dot red"></span>
-                            <span class="browser-dot yellow"></span>
-                            <span class="browser-dot green"></span>
-                            <span class="browser-url"><i class="fas fa-lock"></i> mylocalbusiness.pk</span>
-                        </div>
-                        <div class="browser-body">
-                            <div class="mock-nav"><span class="mock-logo"></span><span class="mock-link"></span><span class="mock-link"></span><span class="mock-link"></span></div>
-                            <div class="mock-hero">
-                                <span class="mock-headline"></span>
-                                <span class="mock-headline short"></span>
-                                <span class="mock-para"></span>
-                                <span class="mock-btn"></span>
-                            </div>
-                            <div class="mock-cards">
-                                <span class="mock-card"></span>
-                                <span class="mock-card"></span>
-                                <span class="mock-card"></span>
-                            </div>
-                        </div>
-                        <div class="browser-badge">
-                            <i class="fas fa-check-circle"></i> Live &amp; Making You Sales
-                        </div>
-                    </div>
-                    <div class="hero-photo-badge">
-                        <div class="photo-circle"><i class="fas fa-user"></i></div>
-                        <div>
-                            <strong>Multan, Pakistan</strong>
-                            <span>Replies within a few hours</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+  <div class="wrap">
+    <div class="status"><span class="dot"></span> Available for new projects — Multan, Pakistan</div>
+    <h1>Websites that make your business feel <em>established</em>.</h1>
+    <p class="lede">I design and build clean, fast, professional sites for schools, clinics, restaurants and shops — the kind of site that earns trust the moment it loads.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#work">See the work</a>
+      <a class="btn-secondary" href="#contact">Start a project</a>
+    </div>
+  </div>
+</section>
 
-    <!-- Services -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Services</span>
-                <h2>What I Can Build For You</h2>
-                <p>Simple, clear packages — no hidden costs, no confusion.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card regular-card">
-                    <div class="service-badge badge-silver">Starter</div>
-                    <div class="service-icon icon-regular"><i class="fas fa-file-alt"></i></div>
-                    <h3>Regular</h3>
-                    <p>A clean one-page site to get your business online quickly and affordably.</p>
-                    <ul>
-                        <li>Single Page Design</li>
-                        <li>Services or Menu Section</li>
-                        <li>Contact Form + WhatsApp</li>
-                        <li>Google Maps Location</li>
-                        <li>Mobile Responsive</li>
-                    </ul>
-                    <div class="service-price price-regular">Rs 10,000 – 15,000</div>
-                </div>
-                <div class="service-card featured">
-                    <div class="service-badge">Most Popular</div>
-                    <div class="service-icon"><i class="fas fa-layer-group"></i></div>
-                    <h3>Mid Tier</h3>
-                    <p>Multi-section site for businesses that want more — about, gallery, team and more.</p>
-                    <ul>
-                        <li>Everything in Regular</li>
-                        <li>Up to 3 Sections / Pages</li>
-                        <li>Photo Gallery</li>
-                        <li>Team or Staff Section</li>
-                        <li>Email Integration (EmailJS)</li>
-                    </ul>
-                    <div class="service-price">Rs 15,000 – 25,000</div>
-                </div>
-                <div class="service-card premium-card">
-                    <div class="service-badge badge-gold">Best Value</div>
-                    <div class="service-icon icon-premium"><i class="fas fa-crown"></i></div>
-                    <h3>Premium</h3>
-                    <p>Full-featured site with advanced sections, animations and everything built custom.</p>
-                    <ul>
-                        <li>Everything in Mid Tier</li>
-                        <li>Unlimited Sections</li>
-                        <li>Custom Animations</li>
-                        <li>SEO Optimization</li>
-                        <li>Priority Support</li>
-                    </ul>
-                    <div class="service-price price-premium">Rs 25,000 – 35,000</div>
-                </div>
-                <div class="service-card monthly-card">
-                    <div class="service-badge badge-teal">Care Plan</div>
-                    <div class="service-icon icon-monthly"><i class="fas fa-headset"></i></div>
-                    <h3>Monthly Care</h3>
-                    <p>Keep your site updated and running smooth every month with ongoing support.</p>
-                    <ul>
-                        <li>Content Updates (2/month)</li>
-                        <li>Uptime & Security Monitoring</li>
-                        <li>Backup & Recovery</li>
-                        <li>WhatsApp Priority Support</li>
-                    </ul>
-                    <div class="service-price price-monthly">Rs 5,000 <span>/ month</span></div>
-                </div>
-            </div>
-            <p class="services-note"><i class="fas fa-info-circle"></i> Every package includes responsive mobile design, free revisions and lifetime basic support.</p>
-            <div class="compare-toggle">
-                <button class="btn btn-outline btn-sm" id="compareToggle">
-                    <i class="fas fa-table"></i> Compare Packages Side-by-Side
-                </button>
-            </div>
-            <div class="compare-table-wrap" id="compareTable">
-                <div class="table-scroll">
-                    <table class="compare-table">
-                        <thead>
-                            <tr>
-                                <th>Feature</th>
-                                <th>Starter</th>
-                                <th class="mid-col">Mid Tier <span class="pop-tag">Popular</span></th>
-                                <th class="prem-col">Premium <span class="pop-tag gold">Best Value</span></th>
-                                <th>Monthly Care</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>One-page design</td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
-                            <tr><td>Services / Menu section</td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
-                            <tr><td>Contact form + WhatsApp</td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
-                            <tr><td>Google Maps location</td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
-                            <tr><td>Multi-section / extra pages</td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
-                            <tr><td>Photo gallery</td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
-                            <tr><td>Team / staff section</td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
-                            <tr><td>Email integration (EmailJS)</td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
-                            <tr><td>Custom animations</td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
-                            <tr><td>SEO optimization</td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-check"></i></td><td><i class="fas fa-minus"></i></td></tr>
-                            <tr><td>Ongoing updates &amp; monitoring</td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-minus"></i></td><td><i class="fas fa-check"></i></td></tr>
-                            <tr class="price-row">
-                                <td>Price</td>
-                                <td>Rs 10k–15k</td>
-                                <td class="mid-col">Rs 15k–25k</td>
-                                <td class="prem-col">Rs 25k–35k</td>
-                                <td>Rs 5k/mo</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="wrap">
+  <div class="stats-strip">
+    <div><span class="num">4</span><span class="label">Sites launched & live</span></div>
+    <div><span class="num">24h</span><span class="label">Average quote turnaround</span></div>
+    <div><span class="num">100%</span><span class="label">Client satisfaction</span></div>
+  </div>
+</div>
 
-    <!-- Work -->
-    <section class="work" id="work">
-        <div class="container">
-            <div class="section-header light">
-                <span class="section-tag">My Work</span>
-                <h2>Recent Projects</h2>
-                <p>A look at websites I've recently designed and launched.</p>
-            </div>
-            <div class="work-grid">
-                <a href="https://pvpayaan-commits.github.io/nishat-boys-high-school/" target="_blank" class="work-card">
-                    <div class="work-thumb">
-                        <img src="assets/school.jpg" alt="Nishat Boys High School website">
-                        <span class="work-type">School Website</span>
-                    </div>
-                    <div class="work-info">
-                        <h3>Nishat Boys High School</h3>
-                        <p class="work-desc">Complete school website — programs, admissions, gallery &amp; live contact form.</p>
-                        <p class="work-case"><i class="fas fa-arrow-right"></i> <strong>Problem:</strong> no online presence. <strong>Fix:</strong> built a site that now handles most admission inquiries directly.</p>
-                        <span class="work-link"><i class="fas fa-external-link-alt"></i> View Site</span>
-                    </div>
-                </a>
-                <a href="multan-metro/" target="_blank" class="work-card">
-                    <div class="work-thumb">
-                        <img src="assets/restaurant.jpg" alt="Multan Metro Restaurant website">
-                        <span class="work-type">Restaurant</span>
-                    </div>
-                    <div class="work-info">
-                        <h3>Multan Metro Restaurant</h3>
-                        <p class="work-desc">Menu showcase, photo gallery, table booking and WhatsApp ordering.</p>
-                        <p class="work-case"><i class="fas fa-arrow-right"></i> <strong>Problem:</strong> customers couldn&rsquo;t find the menu or timings online. <strong>Fix:</strong> launched a site with menu + WhatsApp ordering.</p>
-                        <span class="work-link">View Site <i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                </a>
-                <a href="city-care-clinic/" target="_blank" class="work-card">
-                    <div class="work-thumb">
-                        <img src="assets/clinic.jpg" alt="Nishtar Hospital website">
-                        <span class="work-type">Hospital</span>
-                    </div>
-                    <div class="work-info">
-                        <h3>Nishtar Hospital</h3>
-                        <p class="work-desc">Doctor profiles, timings, appointment booking and directions on maps.</p>
-                        <p class="work-case"><i class="fas fa-arrow-right"></i> <strong>Problem:</strong> patients didn&rsquo;t know doctors&rsquo; timings. <strong>Fix:</strong> added profiles, timings and online booking.</p>
-                        <span class="work-link">View Site <i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                </a>
-                <a href="lumiere-dental/" target="_blank" class="work-card">
-                    <div class="work-thumb">
-                        <img src="assets/dental.jpg" alt="Lumière Dental Studio website">
-                        <span class="work-type">Dental Clinic</span>
-                    </div>
-                    <div class="work-info">
-                        <h3>Lumière Dental Studio</h3>
-                        <p class="work-desc">Premium dental clinic — services, team bios, before/after gallery, testimonials and booking form.</p>
-                        <p class="work-case"><i class="fas fa-arrow-right"></i> <strong>Problem:</strong> looked generic. <strong>Fix:</strong> designed a premium, trust-building site with online booking.</p>
-                        <span class="work-link">View Site <i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Services</div>
+      <h2>Four clear packages</h2>
+      <p>No hidden costs, no confusion. Every tier includes responsive design, revisions, and support after launch.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="tier-label">Starter</div>
+        <h3>Regular</h3>
+        <div class="desc">A clean one-page site to get your business online quickly and affordably.</div>
+        <div class="price">Rs 10–15k<small>one-time</small></div>
+        <ul class="features">
+          <li>Single page design</li>
+          <li>Services or menu section</li>
+          <li>Contact form + WhatsApp</li>
+          <li>Google Maps location</li>
+          <li>Mobile responsive</li>
+        </ul>
+        <div class="cta">Get started</div>
+      </div>
+      <div class="service-card featured">
+        <div class="ribbon">Most popular</div>
+        <div class="tier-label">Mid Tier</div>
+        <h3>Growth</h3>
+        <div class="desc">Multi-section site for businesses that want more — about, gallery, team and more.</div>
+        <div class="price">Rs 15–25k<small>one-time</small></div>
+        <ul class="features">
+          <li>Everything in Regular</li>
+          <li>Up to 3 sections / pages</li>
+          <li>Photo gallery</li>
+          <li>Team or staff section</li>
+          <li>Email integration</li>
+        </ul>
+        <div class="cta">Get started</div>
+      </div>
+      <div class="service-card">
+        <div class="tier-label">Best value</div>
+        <h3>Premium</h3>
+        <div class="desc">Full-featured site with advanced sections, animations and everything built custom.</div>
+        <div class="price">Rs 25–35k<small>one-time</small></div>
+        <ul class="features">
+          <li>Everything in Growth</li>
+          <li>Unlimited sections</li>
+          <li>Custom animations</li>
+          <li>SEO optimization</li>
+          <li>Priority support</li>
+        </ul>
+        <div class="cta">Get started</div>
+      </div>
+      <div class="service-card">
+        <div class="tier-label">Care plan</div>
+        <h3>Monthly Care</h3>
+        <div class="desc">Keep your site updated and running smoothly every month.</div>
+        <div class="price">Rs 5k<small>per month</small></div>
+        <ul class="features">
+          <li>Content updates (2/month)</li>
+          <li>Uptime & security monitoring</li>
+          <li>Backup & recovery</li>
+          <li>WhatsApp priority support</li>
+        </ul>
+        <div class="cta">Get started</div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:36px;">Every package includes responsive mobile design, free revisions and lifetime basic support.</p>
+  </div>
+</section>
 
-    <!-- About -->
-    <section class="about" id="about">
-        <div class="about-bg">
-            <i class="fas fa-code about-shape ab-1"></i>
-            <i class="fas fa-laptop-code about-shape ab-2"></i>
-            <i class="fas fa-brackets-curly about-shape ab-3"></i>
-            <i class="fas fa-cogs about-shape ab-4"></i>
-            <i class="fas fa-rocket about-shape ab-5"></i>
-            <span class="about-blob blob-1"></span>
-            <span class="about-blob blob-2"></span>
-            <span class="about-blob blob-3"></span>
-        </div>
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <span class="section-tag">About Me</span>
-                    <h2>Websites that make your business look established</h2>
-                    <p>
-                        Hi, I'm <strong>Rayyan</strong> from Multan. I build clean, professional websites
-                        for local businesses and schools. Most small businesses in Pakistan don't have a
-                        website — and customers search online before they buy. A website turns those searches
-                        into your customers.
-                    </p>
-                    <p>
-                        I handle everything from design to launch. You don't need technical knowledge —
-                        just tell me about your business and I'll do the rest.
-                    </p>
-                    <div class="stats-row">
-                        <div class="stat">
-                            <span class="stat-num"><i class="fas fa-check-double"></i></span>
-                            <span class="stat-label">Projects Delivered</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-num">100%</span>
-                            <span class="stat-label">Client Satisfaction</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-num">24hr</span>
-                            <span class="stat-label">Quote Turnaround</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Recent work</div>
+      <h2>Sites built for real businesses</h2>
+      <p>Each project starts with the same question: what does this business need visitors to believe in the first five seconds?</p>
+    </div>
+    <div class="work-grid">
+      <div class="work-item">
+        <div class="work-tag">School</div>
+        <h3>Nishat Boys High School</h3>
+        <p>The school had no online presence — parents relied on word-of-mouth. Built a full site with programs, admissions, and a live contact form.</p>
+        <a class="work-link" href="https://pvpayaan-commits.github.io/nishat-boys-high-school/" target="_blank">View site →</a>
+      </div>
+      <div class="work-item">
+        <div class="work-tag">Restaurant</div>
+        <h3>Multan Metro Restaurant</h3>
+        <p>Customers couldn't browse the menu or book without calling. Built a menu showcase, gallery, table booking and WhatsApp ordering.</p>
+        <a class="work-link" href="https://pvpayaan-commits.github.io/rayyan-portfolio/multan-metro/" target="_blank">View site →</a>
+      </div>
+      <div class="work-item">
+        <div class="work-tag">Hospital</div>
+        <h3>Nishtar Hospital</h3>
+        <p>Patients had no easy way to check doctor availability. Built doctor profiles, timings, appointment booking and map directions.</p>
+        <a class="work-link" href="https://pvpayaan-commits.github.io/rayyan-portfolio/city-care-clinic/" target="_blank">View site →</a>
+      </div>
+      <div class="work-item">
+        <div class="work-tag">Dental clinic</div>
+        <h3>Lumière Dental Studio</h3>
+        <p>Wanted a premium look to match premium pricing, not a generic template. Built service breakdowns, team bios, gallery and booking.</p>
+        <a class="work-link" href="https://pvpayaan-commits.github.io/rayyan-portfolio/lumiere-dental/" target="_blank">View site →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Process -->
-    <section class="process">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">How It Works</span>
-                <h2>From Idea to Live Website</h2>
-            </div>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-num">1</div>
-                    <div class="step-icon"><i class="fab fa-whatsapp"></i></div>
-                    <h3>Message Me</h3>
-                    <p>Tell me about your business on WhatsApp — free, no obligation.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-num">2</div>
-                    <div class="step-icon"><i class="fas fa-file-invoice"></i></div>
-                    <h3>Get a Quote</h3>
-                    <p>I send a clear price and timeframe within 24 hours.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-num">3</div>
-                    <div class="step-icon"><i class="fas fa-paint-brush"></i></div>
-                    <h3>Design & Build</h3>
-                    <p>I build your site and share previews at every stage for feedback.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-num">4</div>
-                    <div class="step-icon"><i class="fas fa-rocket"></i></div>
-                    <h3>Launch & Support</h3>
-                    <p>Your site goes live. I stay on WhatsApp for anything you need.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-visual"><span class="mark">R.</span></div>
+    <div class="about-text">
+      <div class="eyebrow">About</div>
+      <h2 style="margin-bottom:24px;">Built by one person, so nothing gets lost in translation.</h2>
+      <p>I'm <strong>Rayyan</strong>, based in Multan. I build clean, professional websites for local businesses and schools — most small businesses in Pakistan still don't have one, and customers are already searching online before they buy.</p>
+      <p>I handle everything from design to launch. You don't need technical knowledge — just tell me about your business and I'll do the rest, and stay reachable on WhatsApp after your site goes live.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header light">
-                <span class="section-tag">Testimonials</span>
-                <h2>What Clients Say</h2>
-            </div>
-            <div class="testimonial-slider">
-                <div class="t-card active">
-                    <div class="t-quote"><i class="fas fa-quote-left"></i></div>
-                    <p>"Rayyan built our school website and it looks amazing. Parents now find us on Google and contact us directly through the site."</p>
-                    <div class="t-author">
-                        <div class="t-avatar"><i class="fas fa-graduation-cap"></i></div>
-                        <div>
-                            <h4>School Principal</h4>
-                            <span>School — Nishat Boys High School</span>
-                            <span class="t-loc"><i class="fas fa-map-marker-alt"></i> Lodhi Colony, Multan</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="t-card">
-                    <div class="t-quote"><i class="fas fa-quote-left"></i></div>
-                    <p>"Fast work, reasonable price, everything explained clearly. My shop's customers can finally find our timings and location online."</p>
-                    <div class="t-author">
-                        <div class="t-avatar"><i class="fas fa-store"></i></div>
-                        <div>
-                            <h4>Business Owner</h4>
-                            <span>Retail Store — Multan</span>
-                            <span class="t-loc"><i class="fas fa-map-marker-alt"></i> Gulberg, Multan</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="t-card">
-                    <div class="t-quote"><i class="fas fa-quote-left"></i></div>
-                    <p>"Very professional. He handled the hosting and everything else too — I didn't have to do anything technical."</p>
-                    <div class="t-author">
-                        <div class="t-avatar"><i class="fas fa-user-tie"></i></div>
-                        <div>
-                            <h4>Clinic Owner</h4>
-                            <span>Private Clinic — Lodhi Colony</span>
-                            <span class="t-loc"><i class="fas fa-map-marker-alt"></i> Lodhi Colony, Multan</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="t-dots">
-                <span class="dot active" data-index="0"></span>
-                <span class="dot" data-index="1"></span>
-                <span class="dot" data-index="2"></span>
-            </div>
-        </div>
-    </section>
+<section id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">How it works</div>
+      <h2>From a message to a live site</h2>
+    </div>
+    <div class="process-list">
+      <div class="process-item"><span class="step">1</span><h3>Message me</h3><p>Tell me about your business on WhatsApp — free, no obligation.</p></div>
+      <div class="process-item"><span class="step">2</span><h3>Get a quote</h3><p>A clear price and timeframe within 24 hours.</p></div>
+      <div class="process-item"><span class="step">3</span><h3>Design & build</h3><p>Previews shared at every stage for feedback.</p></div>
+      <div class="process-item"><span class="step">4</span><h3>Launch & support</h3><p>Your site goes live, I stay on WhatsApp after.</p></div>
+    </div>
+  </div>
+</section>
 
-    <!-- Contact -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-box">
-                <span class="section-tag">Contact</span>
-                <h2>Ready to get your business online?</h2>
-                <div class="response-badge"><i class="fas fa-bolt"></i> Response time: usually within a few hours</div>
-                <p>Message me on WhatsApp or email — I reply quickly and the first consultation is free.</p>
-                <div class="contact-actions">
-                    <a href="https://wa.me/923208263108?text=Hi%20Rayyan%2C%20I%20want%20a%20website%20for%20my%20business" target="_blank" class="btn btn-accent btn-lg">
-                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                    </a>
-                    <a href="mailto:rayyandev28@gmail.com" class="btn btn-outline btn-lg">
-                        <i class="fas fa-envelope"></i> Email Me
-                    </a>
-                </div>
-                <div class="payment-note"><i class="fas fa-shield-alt"></i> No advance needed — pay after you approve your website.</div>
-                <div class="contact-meta">
-                    <span><i class="fas fa-phone-alt"></i> 0320 8263108</span>
-                    <span><i class="fas fa-envelope"></i> rayyandev28@gmail.com</span>
-                    <span><i class="fab fa-discord"></i> iambored99</span>
-                    <span><i class="fas fa-map-marker-alt"></i> Multan, Pakistan</span>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Testimonials</div>
+      <h2>What clients say</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-item">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Parents now find us on Google and contact us directly through the site."</p>
+        <div class="who">School Principal</div>
+        <div class="where">Nishat Boys High School</div>
+      </div>
+      <div class="testi-item">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Fast work, reasonable price, everything explained clearly."</p>
+        <div class="who">Business Owner</div>
+        <div class="where">Multan</div>
+      </div>
+      <div class="testi-item">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Very professional. He handled the hosting and everything else too."</p>
+        <div class="who">Client</div>
+        <div class="where">Lodhi Colony, Multan</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">Rayyan<span>.</span></div>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#services">Services</a>
-                    <a href="#work">My Work</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://wa.me/923208263108" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-discord"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Rayyan. Web Designer & Developer, Multan. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-box">
+      <h2>Ready to get your business online?</h2>
+      <p>Message me on WhatsApp or email — I reply quickly, and the first consultation is free.</p>
+      <div class="contact-links">
+        <a class="btn-primary" href="https://wa.me/923208263108?text=Hi%20Rayyan%2C%20I%20want%20a%20website%20for%20my%20business" target="_blank">Chat on WhatsApp</a>
+        <a class="btn-secondary" href="mailto:rayyandev28@gmail.com">Email me</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <a href="#home" class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+    <div>© 2026 Rayyan — Web Designer & Developer, Multan.</div>
+    <div>0320 8263108 · rayyandev28@gmail.com</div>
+  </div>
+</footer>
 
-    <!-- Sticky Mobile WhatsApp CTA -->
-    <a href="https://wa.me/923208263108?text=Hi%20Rayyan%2C%20I%20want%20a%20website%20for%20my%20business" target="_blank" class="sticky-wa" id="stickyWa">
-        <span class="sticky-wa-icon"><i class="fab fa-whatsapp"></i></span>
-        <span class="sticky-wa-text"><strong>Chat on WhatsApp</strong><small>Response in a few hours</small></span>
-    </a>
-
-    <script src="script.js"></script>
 </body>
 </html>
