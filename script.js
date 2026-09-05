@@ -97,7 +97,7 @@ const revealObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.service-card, .work-card, .process-step, .about-content, .about-photo, .t-card, .contact-box, .faq-item, .audit-box').forEach(element => {
+document.querySelectorAll('.service-card, .work-card, .process-step, .about-content, .about-photo, .t-card, .contact-box, .faq-item, .audit-box, .section-header').forEach(element => {
     element.classList.add('reveal');
     revealObserver.observe(element);
 });
@@ -126,6 +126,25 @@ if (servicesSection) {
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     });
     staggerObserver.observe(servicesSection);
+}
+
+// 3D tilt on work cards (desktop with mouse)
+const workTiltCards = document.querySelectorAll('.work-card');
+if (window.matchMedia('(pointer: fine) and (min-width: 769px)').matches) {
+    workTiltCards.forEach(card => {
+        const strength = 6;
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width - 0.5;
+            const y = (e.clientY - rect.top) / rect.height - 0.5;
+            card.style.transform = `perspective(700px) rotateX(${(-y * strength).toFixed(2)}deg) rotateY(${(x * strength).toFixed(2)}deg) translateY(-4px)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transition = 'transform 0.5s ease';
+            card.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg)';
+            setTimeout(() => { card.style.transition = ''; }, 500);
+        });
+    });
 }
 
 // Scroll Progress Bar
