@@ -1395,26 +1395,6 @@ section {
     margin-bottom: 8px;
 }
 
-.work-case {
-    background: rgba(0, 200, 83, 0.08);
-    border: 1px solid rgba(0, 200, 83, 0.2);
-    border-radius: 10px;
-    padding: 12px 14px;
-    font-size: 0.8rem !important;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.75) !important;
-    margin-bottom: 15px;
-}
-
-.work-case i {
-    color: var(--accent);
-    margin-right: 4px;
-}
-
-.work-case strong {
-    color: var(--accent);
-}
-
 .work-link {
     display: inline-flex;
     align-items: center;
