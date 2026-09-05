@@ -845,12 +845,34 @@ section {
 }
 
 .service-price {
-    font-size: 1.7rem;
-    font-weight: 800;
     color: var(--primary);
     border-top: 1px dashed #ddd;
     padding-top: 18px;
     margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    line-height: 1.15;
+}
+
+.service-price .price-line {
+    font-size: 1.7rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.service-price .price-rs {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-light);
+    letter-spacing: 0.3px;
+}
+
+.service-price .price-per {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-light);
 }
 
 .service-card.featured .service-price {
@@ -858,14 +880,14 @@ section {
     border-top-color: rgba(255, 255, 255, 0.3);
 }
 
-.service-price span {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--text-light);
+.service-card.featured .service-price .price-rs,
+.service-card.featured .service-price .price-per {
+    color: rgba(255, 255, 255, 0.75);
 }
 
-.service-card.featured .service-price span {
-    color: rgba(255, 255, 255, 0.7);
+.service-card.premium-card .price-rs,
+.service-card.premium-card .price-per {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 /* Premium Card — Dark Gold Luxury */
@@ -1301,6 +1323,16 @@ section {
     font-size: 1rem;
     background: var(--white);
     border-top: 2px solid #dfe4f2;
+    line-height: 1.25;
+    white-space: nowrap;
+}
+
+.compare-table .price-row .price-rs {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-top: 2px;
 }
 
 /* ============ Work ============ */
