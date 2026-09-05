@@ -97,7 +97,7 @@ const revealObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.service-card, .work-card, .process-step, .about-content, .about-photo, .t-card, .contact-box, .faq-item, .audit-box, .section-header').forEach(element => {
+document.querySelectorAll('.service-card, .work-card, .process-step, .about-content, .about-photo, .t-card, .contact-box, .faq-item, .section-header').forEach(element => {
     element.classList.add('reveal');
     revealObserver.observe(element);
 });
