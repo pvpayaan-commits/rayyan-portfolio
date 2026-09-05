@@ -97,7 +97,7 @@ const revealObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.service-card, .work-card, .process-step, .about-content, .about-photo, .t-card, .contact-box').forEach(element => {
+document.querySelectorAll('.service-card, .work-card, .process-step, .about-content, .about-photo, .t-card, .contact-box, .faq-item, .audit-box').forEach(element => {
     element.classList.add('reveal');
     revealObserver.observe(element);
 });
@@ -279,4 +279,14 @@ window.addEventListener('scroll', () => {
             stickyWaShown = false;
         }
     }
+});
+
+// ===== FAQ Accordion =====
+document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+    });
 });
