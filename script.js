@@ -200,7 +200,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Typing Effect
 const typedPhrases = [
-    'Professional websites for businesses in Multan',
+    'Professional websites for businesses worldwide',
     'Clean designs that load fast on every device',
     'From school sites to restaurant pages',
     'Affordable pricing, premium quality',
