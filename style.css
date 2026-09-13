@@ -1583,65 +1583,6 @@ section {
     color: var(--text-light);
 }
 
-/* ============ Process ============ */
-.process {
-    background: var(--off-white);
-}
-
-.process-steps {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-.process-step {
-    text-align: center;
-    padding: 35px 25px;
-    background: var(--white);
-    border-radius: 20px;
-    position: relative;
-    transition: var(--transition);
-    box-shadow: var(--shadow);
-}
-
-.process-step:hover {
-    transform: translateY(-8px);
-}
-
-.step-num {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: rgba(108, 92, 231, 0.15);
-}
-
-.step-icon {
-    width: 65px;
-    height: 65px;
-    background: linear-gradient(135deg, var(--primary), #a29bfe);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 18px;
-    color: var(--white);
-    font-size: 1.5rem;
-    box-shadow: 0 8px 20px rgba(108, 92, 231, 0.35);
-}
-
-.process-step h3 {
-    font-size: 1.05rem;
-    margin-bottom: 8px;
-    color: var(--text);
-}
-
-.process-step p {
-    font-size: 0.85rem;
-    color: var(--text-light);
-}
-
 /* ============ Testimonials ============ */
 .testimonials {
     background: linear-gradient(135deg, #1e2340 0%, #12152b 100%);
@@ -2204,10 +2145,6 @@ section {
     .service-card.featured,
     .service-card.premium-card {
         transform: none;
-    }
-
-    .process-steps {
-        grid-template-columns: 1fr 1fr;
     }
 
     .about-grid {
